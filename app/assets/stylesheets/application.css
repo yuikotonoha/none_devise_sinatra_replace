@@ -13,3 +13,206 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    background: #f2f2f2 !important;
+}
+
+/* TOPカテゴリボタンの横幅修正 */
+.category_button{
+    width: 80%;
+}
+.dropdown-menu-category.show {
+    width: 80%;
+}
+
+/* TOPLP の新規登録＋サインインボタン */
+.top_lp .btn{
+    display: block;
+    width: 90%;
+}
+
+.top_lp .btn a{
+    color: #fff
+}
+.top_lp .btn a:hover{
+    color: #fff
+}
+
+/* input入力欄 枠線CSSなど */
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+/* Amazonボタン背景色 */
+.btn-outline-warning {
+    background-color: #fff !important;
+}
+.btn-outline-warning:hover {
+    color: #fff !important;
+    background-color: #eea236 !important;
+}
+
+/* input タグを改行させたいCSS */
+input[type=file] {
+    display: block;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* 画像一覧画面での一枚の画像の幅指定 */
+.show_images img,.product_detail img{
+    /* width: 80%; */
+    height: 300px;
+    object-fit: contain;
+    background-color: #f2f2f2;
+}
+
+/* 画像一覧画面でblockの指定 */
+.image_block {
+    display: inline-block;
+}
+
+/* ナビゲーションバー部分 */
+.btn-secondary a{
+    color: #fff;
+    display: block;
+}
+.btn-secondary a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.navbar-nav span {
+    color: white !important;
+}
+.fas{
+    padding-right: 4px;
+    color: white;
+}
+
+/* アラート */
+.alert {
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+/* 口コミ部分 */
+.posts {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.posts-content {
+    position: relative;
+    display: inline-block;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+    min-width: 120px;
+    width: 100%;
+    font-size: 16px;
+    background: #d7ebfe;
+    border-radius: 15px;
+}
+.posts-content:before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: -30px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid #d7ebfe;
+}
+
+/* 口コミ編集・削除ボタン */
+.edit-button {
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* イイネ数カウントのCSS */
+.like a ,.like a:hover{
+    color: red;
+    text-decoration: none;
+    font-size: 35px;
+}
+.like {
+    color: red;
+    text-decoration: none;
+    font-size: 35px;
+}
+
+/* フォロー数カウントCSS */
+.badge {
+    font-size: 100% !important;
+}
+
+/* 投稿削除確認画面 */
+.btn-danger a {
+    color: #fff;
+    display: block;
+}
+.btn-danger a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* マイページのタイムラインCSS */
+.balloon1-left {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 15px;
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #e0edff;
+}
+
+.balloon1-left:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid #e0edff;
+}
+
+.balloon1-left p {
+    margin: 0;
+    padding: 0;
+}
+
+/*20190730テストCSS*/
+.follow_user_image{
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.d-inline-block{
+    width: 80px;
+}

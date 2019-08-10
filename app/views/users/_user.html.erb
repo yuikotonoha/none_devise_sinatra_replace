@@ -1,0 +1,13 @@
+<div class="col-xl-4 col-md-6 col-sm-12">
+  <!-- Content -->
+  <%= link_to user_path(user), class: "nav-item nav-link" do %>
+    <%#= image_tag user.image_url(:thumb) %>
+    <%= gravatar_for user, size: 50 %>
+  <% end %>
+  <p><%= user.nickname %></p>
+
+<!--  今ログインしているユーザーがadmin（管理者）で、尚且「管理者以外のユーザー」でのみ「削除」リンクを表示させる-->
+  <% if current_user.admin? && !current_user?(user) %>
+    | <%= link_to "削除", user, method: :delete, data: { confirm: "You sure?" } %>
+  <% end %>
+</div>

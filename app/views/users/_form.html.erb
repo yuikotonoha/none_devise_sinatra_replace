@@ -1,0 +1,21 @@
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages', object: @user %>
+
+  <%= f.label :nickname %>
+  <%= f.text_field :nickname, class: 'form-control' %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :image, "プロフィール画像" %>
+  <%= f.file_field :image, class: 'form-control' %><br>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+  <!--ここのテキストはedit.html.erbか、new.html.erbから受け取る-->
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

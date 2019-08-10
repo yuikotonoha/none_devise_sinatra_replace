@@ -1,0 +1,14 @@
+<% provide(:title, "ユーザー一覧") %>
+<div class="text-center mt-5 mb-5">
+  <h2>ユーザー一覧</h2>
+</div>
+
+<%= will_paginate %>
+
+<div class="row show_images text-center">
+
+    <%= render @users %>
+
+</div>
+
+<%= will_paginate %>

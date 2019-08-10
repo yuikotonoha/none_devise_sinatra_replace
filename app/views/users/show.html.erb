@@ -1,0 +1,11 @@
+<% provide(:title, "#{@user.nickname}の詳細ページ") %>
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.nickname %>
+</h1>
+
+<div class="text-center">
+  <button type="button" class="btn btn-secondary">
+    <%= link_to "プロフィールを編集する", edit_user_path(current_user) %>
+  </button>
+</div>

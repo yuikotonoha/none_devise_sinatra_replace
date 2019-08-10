@@ -1,0 +1,18 @@
+<% provide(:title, 'プロフィールを更新') %>
+
+<!--app/views/users/_form.html.erb のyield(:button_text)にテキストを渡す-->
+<% provide(:button_text, 'プロフィールを更新') %>
+
+<h1>プロフィールを更新</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+    <!--app/views/users/_form.html.erb のパーシャル呼び出す-->
+    <%= render 'form' %>
+
+    <div class="gravatar_edit">
+      <%= gravatar_for @user %>
+      <a href="http://gravatar.com/emails" target="_blank">Change</a>
+    </div>
+  </div>
+</div>

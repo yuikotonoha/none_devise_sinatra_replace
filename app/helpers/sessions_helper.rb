@@ -23,11 +23,16 @@ module SessionsHelper
 
       #今ログインしているという意味のインスタンス変数@current_userに、usersテーブルからidで検索したユーザーの情報代入
       @current_user ||= User.find_by(id: user_id)
-    elsif (user_id = cookies.signed[:user_id]) #ここの処理がよく分からない
-      user = User.find_by(id: user_id) #ここの処理がよく分からない
-      if user && user.authenticated?(cookies[:remember_token]) #ここの処理がよく分からない
-        log_in user #ここの処理がよく分からない
-        @current_user = user #ここの処理がよく分からない
+
+    #ログインの処理も、新規登録もしていないユーザー、すなわちcookiesだけを保存したユーザーが訪れた時の処理
+    # 暗号化されたcookiesの値をuser_idに代入
+    elsif (user_id = cookies.signed[:user_id])
+      user = User.find_by(id: user_id) #代入されたuser_idの値でUserテーブルからid検索し、userという変数に代入
+
+      #cookiesで検索したユーザーが存在し、渡されたトークンが、DBの暗号化したパスワードと一致するなtureでログインの処理が起きる
+      if user && user.authenticated?(cookies[:remember_token])
+        log_in user #最終的にはcookiesに保存されてたidでログイン、session[:user_id]も再発行される
+        @current_user = user #今ログインしているユーザーは、cookiesに保存されてたidでログインしているユーザー、という意味の代入
       end
     end
   end
